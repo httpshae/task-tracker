@@ -7,19 +7,19 @@ This is a command-line application developed in Java to track and manage tasks.
 This program is a solution to: https://roadmap.sh/projects/task-tracker
 
 ### Command Usage
---help                              list all commands
-add `description`                   add a new task with the provided description
-update `task_id` `new_description`  update an existing task with a new description
-delete `task_id`                    delete the task
-mark-in-progress                    update the task status to "in progress"
-mark-done                           update the task status to "done"
-list                                list all tasks
-list `task_status`                  list all tasks with a status of <task_status>
+- --help                              list all commands
+- add `description`                   add a new task with the provided description
+- update `task_id` `new_description`  update an existing task with a new description
+- delete `task_id`                    delete the task
+- mark-in-progress                    update the task status to "in progress"
+- mark-done                           update the task status to "done"
+- list                                list all tasks
+- list `task_status`                  list all tasks with a status of <task_status>
                                     where task_status can be "todo", "in-progress" or "done"
 
 ## How to run this program locally
 ### Method 1 - Without an alias command
-1. Clone the git repo
+1. Clone the git repo: https://github.com/httpshae/task-tracker
 2. Compile the program: 
 Open a terminal and navigate to the project directory.
 Run following command to compile all of the Java files in the project:
