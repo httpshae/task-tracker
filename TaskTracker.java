@@ -2,6 +2,8 @@ import java.io.IOException;
 
 public class TaskTracker {
     public static void main(String[] args) throws IOException {
+        // TODO: add priority to tasks (mark tasks as important)
+        // TODO: add due date to tasks
 
         Tracker tracker = new Tracker();
 
