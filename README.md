@@ -39,14 +39,12 @@ Setting up a command alias is done by updating the shell configuration file.
 > vi ~/.zshrc
 3. Type 'i' to enter into insert mode.
 4. Add the following line anywhere in the file:
->alias task-tracker='java TaskTracker'
-**Bonus (optional):** Consider setting up an alias to navigate directly to the project directory.
-Example:
->alias open-task-tracker="cd <project_directory>"
-6. Click the 'esc' key to exit insert mode.
-7. Enter the following command to save and exit the file:
+>alias task-tracker='cd <path_to_project>; java TaskTracker'
+5. Click the 'esc' key to exit insert mode.
+6. Enter the following command to save and exit the file:
 >:wq!
-8. Apply the changes by running the below command:
+7. Apply the changes by running the below command:
 >source ~/.zshrc
 
-You should now be able to run the program using the command alias.
+This will create a single command, that when executed, will navigate to the project folder and run the program.
+
