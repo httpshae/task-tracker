@@ -24,6 +24,14 @@ public class Tracker {
         }
     }
 
+    public static void validateId(int id) {
+        if(id > tasks.size() || id< 1) {
+            System.out.println("Invalid task ID. Please provide a valid task ID.");
+            System.out.println("To view all tasks and their IDs, enter 'list'.");
+            System.exit(0);
+        }
+    }
+
     public void updateTrackerFile() throws IOException {
         String json = JsonParser.toJsonArray(tasks);
 
@@ -60,6 +68,7 @@ public class Tracker {
     }
 
     public void updateTask(int taskId, String newDescription) throws IOException {
+        validateId(taskId);
         tasks.get(taskId-1).setDescription(newDescription);
         tasks.get(taskId-1).setUpdatedAt();
         System.out.printf("Task %d updated successfully\n", taskId);
@@ -67,6 +76,7 @@ public class Tracker {
     }
 
     public void deleteTask(int taskId) throws IOException {
+        validateId(taskId);
         tasks.remove(taskId-1);
         System.out.printf("Task %d deleted successfully\n", taskId);
         updateIds(); // ensure that ids are still in order
@@ -74,6 +84,7 @@ public class Tracker {
     }
 
     public void updateTaskByStatus(int taskId, TaskStatus status) throws IOException {
+        validateId(taskId);
         tasks.get(taskId-1).setStatus(status);
         System.out.printf("Task %d marked as %s\n", taskId, status);
         updateTrackerFile();
